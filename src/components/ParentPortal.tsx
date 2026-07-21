@@ -32,7 +32,7 @@ interface ParentPortalProps {
 }
 
 export default function ParentPortal({ disableAnimations }: ParentPortalProps) {
-  const [parentLoggedIn, setParentLoggedIn] = useState(false);
+  const [parentLoggedIn, setParentLoggedIn] = useState(true);
   const [parentPhone, setParentPhone] = useState("+212 668-990011"); // Seeded parent
   const [parentPassword, setParentPassword] = useState("parent123");
   const [error, setError] = useState<string | null>(null);
