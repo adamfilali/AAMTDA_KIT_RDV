@@ -144,51 +144,25 @@ export default function App() {
         </div>
       )}
 
-      {/* PREMIUM HEADER BRANDING RAIL */}
-      <header className="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-100 dark:border-slate-800 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          
-          {/* Logo & Platform Name */}
-          <button 
-            id="btn-brand-logo"
-            onClick={() => navigateTo("landing")}
-            className="flex items-center gap-3.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg text-left"
-          >
-            <div className="h-11 w-11 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-700 flex items-center justify-center text-white shadow-md shadow-emerald-600/10 shrink-0">
-              <Heart className="h-6 w-6 text-emerald-100 fill-emerald-100/20" />
-            </div>
-            <div>
-              <span className="block font-display font-extrabold text-lg text-slate-900 dark:text-white tracking-tight leading-tight">
-                AMTDA <span className="text-emerald-700 dark:text-emerald-400">Maroc</span>
-              </span>
-              <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">
-                Troubles d'Apprentissage
-              </span>
-            </div>
-          </button>
+<button 
+  id="btn-brand-logo" 
+  onClick={() => navigateTo('landing')} 
+  className="flex items-center gap-3.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg text-left"
+>
+  <div className="h-11 w-11 flex items-center justify-center shrink-0">
+    <img src="/images/logo.svg" alt="AMTDA Maroc Logo" className="w-full h-full object-contain" />
+  </div>
 
-          {/* Desktop Navigation Link Toggles */}
-          <nav className="hidden xl:flex items-center gap-1.5 bg-slate-50 dark:bg-slate-950 p-1 rounded-2xl border border-slate-100 dark:border-slate-850">
-            <button
-              id="nav-btn-landing"
-              onClick={() => navigateTo("landing")}
-              className={`px-4.5 py-2.5 rounded-xl text-xs font-extrabold transition-all duration-150 ${
-                currentView === "landing" 
-                  ? "bg-white text-emerald-800 dark:bg-slate-800 dark:text-emerald-400 shadow-sm" 
-                  : "text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
-              }`}
-            >
-              Accueil
-            </button>
-            
-            <button
-              id="nav-btn-wizard"
-              onClick={() => navigateTo("wizard")}
-              className={`px-4.5 py-2.5 rounded-xl text-xs font-extrabold transition-all duration-150 flex items-center gap-1.5 ${
-                currentView === "wizard" 
-                  ? "bg-white text-emerald-800 dark:bg-slate-800 dark:text-emerald-400 shadow-sm" 
-                  : "text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
-              }`}
+  <div>
+    <span className="block font-display font-extrabold text-lg text-slate-900 dark:text-white tracking-tight leading-tight">
+      AMTDA <span className="text-emerald-700 dark:text-emerald-400">Maroc</span>
+    </span>
+    <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">
+      Troubles d Apprentissage
+    </span>
+  </div>
+</button>
+
             >
               <Calendar className="h-3.5 w-3.5 text-emerald-600 shrink-0" /> Prendre Rendez-vous
             </button>
