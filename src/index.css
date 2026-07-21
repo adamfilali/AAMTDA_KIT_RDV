@@ -1,8 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
-@import "tailwindcss";
+import { createClient } from '@supabase/supabase-js';
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+// Initialisation propre avec les variables Vercel de production
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_ANON_KEY
+);
+
+export default async function handler(req, res) {
+  // Configuration CORS complète
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  // Extraction sécurisée du path de l'URL
+  const fullUrl = req.url.split('?')[0];
+  
+  // Cette ligne isole le mot clé final (ex: 'specialists', 'users', 'diagnostics') peu importe comment Vercel transmet l'URL
+  const segments = fullUrl.split('/').filter(Boolean);
+  let path = segments[segments.length - 1] || 'users';
+  if (path === 'api') path = 'users'; 
+
+  try {
+    // Méthode GET : Lecture dans Supabase
+    if (req.method === 'GET') {
+      const { data, error } = await supabase
+        .from('app_data')
+        .select('value')
+        .eq('key', path)
+        .single();
+
+      if (error || !data) {
+        // En cas d'absence de données, renvoyer un tableau vide pour éviter le crash du front-end
+        return res.status(200).json([]);
+      }
+      return res.status(200).json(data.value);
+    }
+
+    // Méthode POST : Écriture/Ajout dans Supabase
+    if (req.method === 'POST') {
+      const newData = req.body;
+      
+      const { data: current } = await supabase
+        .from('app_data')
+        .select('value')
+        .eq('key', path)
+        .single();
+        
+      const list = current ? current.value : [];
+      list.push(newData);
+      
+      await supabase.from('app_data').upsert({ key: path, value: list });
+      return res.status(201).json(newData);
+    }
+
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
 }

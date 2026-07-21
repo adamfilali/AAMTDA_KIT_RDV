@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-// Script de secours AMTDA pour la démonstration client à Oujda
+// Script de secours AMTDA pour la démonstration
 if (typeof window !== 'undefined') {
   const fullDb = {
     "users": [
