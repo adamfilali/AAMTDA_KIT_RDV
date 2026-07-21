@@ -38,11 +38,11 @@ export default function SpecialistPortal({ disableAnimations }: SpecialistPortal
   const [username, setUsername] = useState("amina"); // Test specialist login
   const [password, setPassword] = useState("therapist123");
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   // Specialist Session details
-  const [sessionUser, setSessionUser] = useState<any>(null);
-  const [sessionSpec, setSessionSpec] = useState<any>(null);
+const [sessionUser, setSessionUser] = useState<any>({ id: "user-1", name: "Amina Alami" });
+const [sessionSpec, setSessionSpec] = useState<any>({ id: "spec-1", name: "Amina Alami", profession: "Orthophoniste" });
 
   // Tab views
   const [activeTab, setActiveTab] = useState<"agenda" | "patients" | "messages" | "guide" | "documents">("agenda");
