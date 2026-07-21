@@ -7,7 +7,7 @@ const supabase = createClient(
 );
 
 export default async function handler(req, res) {
-  // Gestion des permissions CORS pour éviter les blocages entre Casa et Oujda
+  // Gestion des permissions CORS pour éviter les blocages 
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
