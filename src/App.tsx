@@ -152,19 +152,13 @@ export default function App() {
           <button 
             id="btn-brand-logo"
             onClick={() => navigateTo("landing")}
-            className="flex items-center gap-3.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg text-left"
+            className="flex items-center focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg text-left"
           >
-            <div className="h-11 w-11 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-700 flex items-center justify-center text-white shadow-md shadow-emerald-600/10 shrink-0">
-              <Heart className="h-6 w-6 text-emerald-100 fill-emerald-100/20" />
-            </div>
-            <div>
-              <span className="block font-display font-extrabold text-lg text-slate-900 dark:text-white tracking-tight leading-tight">
-                AMTDA <span className="text-emerald-700 dark:text-emerald-400">Maroc</span>
-              </span>
-              <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-bold">
-                Troubles d'Apprentissage
-              </span>
-            </div>
+            <img 
+              src="/images/logo.svg" 
+              alt="Logo AMTDA Maroc" 
+              className="h-14 w-auto object-contain" 
+            />
           </button>
 
           {/* Desktop Navigation Link Toggles */}
