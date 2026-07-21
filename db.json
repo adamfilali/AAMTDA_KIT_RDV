@@ -1,0 +1,515 @@
+{
+  "users": [
+    {
+      "id": "u-admin",
+      "username": "admin",
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "role": "ADMIN",
+      "name": "Direction AMTDA Maroc",
+      "email": "contact@amtda.ma",
+      "phone": "+212 522-013444",
+      "createdAt": "2026-07-21T01:28:52.486Z"
+    },
+    {
+      "id": "u-sec",
+      "username": "secretaire",
+      "passwordHash": "ee63c6506c68d4613b9553820393f22db66a1dbc9ba6dc5640df9fce741e6258",
+      "role": "SECRETAIRE",
+      "name": "Siham El Fassi",
+      "email": "siham@amtda.ma",
+      "phone": "+212 661-089336",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    },
+    {
+      "id": "u-ben",
+      "username": "amina",
+      "passwordHash": "c108533d4511b3e7263207ace80f6b4be9dd983898514f1dbc075c9b6a83bae1",
+      "role": "SPECIALISTE",
+      "name": "Dr. Amina Bennani",
+      "email": "amina.b@amtda.ma",
+      "phone": "+212 661-078045",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    },
+    {
+      "id": "u-amr",
+      "username": "youssef",
+      "passwordHash": "c108533d4511b3e7263207ace80f6b4be9dd983898514f1dbc075c9b6a83bae1",
+      "role": "SPECIALISTE",
+      "name": "M. Youssef El Amrani",
+      "email": "youssef.a@amtda.ma",
+      "phone": "+212 661-518927",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    },
+    {
+      "id": "u-ala",
+      "username": "sofia",
+      "passwordHash": "c108533d4511b3e7263207ace80f6b4be9dd983898514f1dbc075c9b6a83bae1",
+      "role": "SPECIALISTE",
+      "name": "Dr. Sofia Alami",
+      "email": "sofia.a@amtda.ma",
+      "phone": "+212 662-112233",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    },
+    {
+      "id": "u-mez",
+      "username": "leila",
+      "passwordHash": "c108533d4511b3e7263207ace80f6b4be9dd983898514f1dbc075c9b6a83bae1",
+      "role": "SPECIALISTE",
+      "name": "Mme Leila Meziane",
+      "email": "leila.m@amtda.ma",
+      "phone": "+212 663-445566",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    },
+    {
+      "id": "u-taz",
+      "username": "karim",
+      "passwordHash": "c108533d4511b3e7263207ace80f6b4be9dd983898514f1dbc075c9b6a83bae1",
+      "role": "SPECIALISTE",
+      "name": "M. Karim Tazi",
+      "email": "karim.t@amtda.ma",
+      "phone": "+212 664-778899",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    },
+    {
+      "id": "u-aoi",
+      "username": "fatima",
+      "passwordHash": "c108533d4511b3e7263207ace80f6b4be9dd983898514f1dbc075c9b6a83bae1",
+      "role": "SPECIALISTE",
+      "name": "Mme Fatima-Zahra Alaoui",
+      "email": "fatima.a@amtda.ma",
+      "phone": "+212 665-223344",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    },
+    {
+      "id": "u-parent-samir",
+      "username": "samir",
+      "passwordHash": "82e3edf5f5f3a46b5f94579b61817fd9a1f356adcef5ee22da3b96ef775c4860",
+      "role": "PARENT",
+      "name": "Samir Bennani",
+      "email": "samir.bennani@gmail.com",
+      "phone": "+212 668-990011",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    }
+  ],
+  "specialists": [
+    {
+      "id": "sp-1",
+      "userId": "u-ben",
+      "name": "Dr. Amina Bennani",
+      "email": "amina.b@amtda.ma",
+      "phone": "+212 661-078045",
+      "specialties": [
+        "Orthophonie"
+      ],
+      "bio": "Orthophoniste clinicienne avec 12 ans d'expérience, spécialisée dans le traitement de la dyslexie, dysorthographie et des troubles du langage oral chez l'enfant d'âge préscolaire et scolaire.",
+      "avatar": "female_doc_1",
+      "availableDays": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "guichetId": "1"
+    },
+    {
+      "id": "sp-2",
+      "userId": "u-amr",
+      "name": "M. Youssef El Amrani",
+      "email": "youssef.a@amtda.ma",
+      "phone": "+212 661-518927",
+      "specialties": [
+        "Psychomotricité"
+      ],
+      "bio": "Thérapeute en psychomotricité. Prise en charge des troubles du schéma corporel, de l'instabilité motrice, de la dyspraxie et de la latéralité chez l'enfant et l'adolescent.",
+      "avatar": "male_doc_1",
+      "availableDays": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "guichetId": "2"
+    },
+    {
+      "id": "sp-3",
+      "userId": "u-ala",
+      "name": "Dr. Sofia Alami",
+      "email": "sofia.a@amtda.ma",
+      "phone": "+212 662-112233",
+      "specialties": [
+        "Neuropsychologie"
+      ],
+      "bio": "Docteur en Neuropsychologie cognitive. Réalise les bilans intellectuels (WISC-V) et neuropsychologiques pour identifier les troubles attentionnels (TDAH) et dysfonctionnements exécutifs.",
+      "avatar": "female_doc_2",
+      "availableDays": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "guichetId": "3"
+    },
+    {
+      "id": "sp-4",
+      "userId": "u-mez",
+      "name": "Mme Leila Meziane",
+      "email": "leila.m@amtda.ma",
+      "phone": "+212 663-445566",
+      "specialties": [
+        "Psychologie clinique"
+      ],
+      "bio": "Psychologue clinicienne pour enfants et adolescents. Accompagnement psycho-affectif des familles d'enfants en situation d'échec scolaire ou souffrant d'anxiété de performance.",
+      "avatar": "female_doc_3",
+      "availableDays": [
+        1,
+        3,
+        5
+      ],
+      "guichetId": "4"
+    },
+    {
+      "id": "sp-5",
+      "userId": "u-taz",
+      "name": "M. Karim Tazi",
+      "email": "karim.t@amtda.ma",
+      "phone": "+212 664-778899",
+      "specialties": [
+        "Ergothérapie"
+      ],
+      "bio": "Ergothérapeute diplômé d'État. Rééducation des praxies et accompagnement dans les aménagements scolaires (outils informatiques, aides matérielles pour dysgraphie).",
+      "avatar": "male_doc_2",
+      "availableDays": [
+        2,
+        4,
+        5
+      ],
+      "guichetId": "5"
+    },
+    {
+      "id": "sp-6",
+      "userId": "u-aoi",
+      "name": "Mme Fatima-Zahra Alaoui",
+      "email": "fatima.a@amtda.ma",
+      "phone": "+212 665-223344",
+      "specialties": [
+        "Orthoptie"
+      ],
+      "bio": "Orthoptiste spécialisée dans le bilan de fatigue visuelle, de strabisme et d'insuffisances de convergence affectant la poursuite de lecture chez le dyslexique.",
+      "avatar": "female_doc_4",
+      "availableDays": [
+        1,
+        2,
+        4
+      ],
+      "guichetId": "6"
+    }
+  ],
+  "guichets": [
+    {
+      "id": "1",
+      "name": "Guichet 1 - Orthophonie",
+      "specialty": "Orthophonie",
+      "roomNumber": "Salle A01 (RDC)",
+      "capacity": 1
+    },
+    {
+      "id": "2",
+      "name": "Guichet 2 - Psychomotricité",
+      "specialty": "Psychomotricité",
+      "roomNumber": "Salle Gym B02 (Étage 1)",
+      "capacity": 1
+    },
+    {
+      "id": "3",
+      "name": "Guichet 3 - Neuropsychologie",
+      "specialty": "Neuropsychologie",
+      "roomNumber": "Bureau C03 (RDC)",
+      "capacity": 1
+    },
+    {
+      "id": "4",
+      "name": "Guichet 4 - Psychologie",
+      "specialty": "Psychologie clinique",
+      "roomNumber": "Bureau C04 (RDC)",
+      "capacity": 1
+    },
+    {
+      "id": "5",
+      "name": "Guichet 5 - Ergothérapie",
+      "specialty": "Ergothérapie",
+      "roomNumber": "Atelier D05 (Étage 1)",
+      "capacity": 1
+    },
+    {
+      "id": "6",
+      "name": "Guichet 6 - Orthoptie",
+      "specialty": "Orthoptie",
+      "roomNumber": "Salle Optique E06 (RDC)",
+      "capacity": 1
+    }
+  ],
+  "rooms": [
+    {
+      "id": "r-1",
+      "name": "Salle A01",
+      "type": "Orthophonie",
+      "specialistId": "sp-1",
+      "specialistName": "Dr. Amina Bennani",
+      "startDate": "2026-07-01",
+      "endDate": "2026-08-31",
+      "morningStart": "09:00",
+      "morningEnd": "12:00",
+      "afternoonStart": "14:00",
+      "afternoonEnd": "17:00",
+      "appointmentDuration": 45,
+      "status": "disponible"
+    },
+    {
+      "id": "r-2",
+      "name": "Salle B02",
+      "type": "Psychomotricité",
+      "specialistId": "sp-2",
+      "specialistName": "M. Youssef El Amrani",
+      "startDate": "2026-07-01",
+      "endDate": "2026-08-31",
+      "morningStart": "09:00",
+      "morningEnd": "12:00",
+      "afternoonStart": "14:00",
+      "afternoonEnd": "17:00",
+      "appointmentDuration": 45,
+      "status": "disponible"
+    },
+    {
+      "id": "r-3",
+      "name": "Bureau C03",
+      "type": "Neuropsychologie",
+      "specialistId": "sp-3",
+      "specialistName": "Dr. Sofia Alami",
+      "startDate": "2026-07-01",
+      "endDate": "2026-08-31",
+      "morningStart": "09:00",
+      "morningEnd": "12:00",
+      "afternoonStart": "14:00",
+      "afternoonEnd": "17:00",
+      "appointmentDuration": 45,
+      "status": "disponible"
+    },
+    {
+      "id": "r-4",
+      "name": "Bureau C04",
+      "type": "Psychologie clinique",
+      "specialistId": "sp-4",
+      "specialistName": "Mme Leila Meziane",
+      "startDate": "2026-07-01",
+      "endDate": "2026-08-31",
+      "morningStart": "09:00",
+      "morningEnd": "12:00",
+      "afternoonStart": "14:00",
+      "afternoonEnd": "17:00",
+      "appointmentDuration": 45,
+      "status": "disponible"
+    },
+    {
+      "id": "r-5",
+      "name": "Atelier D05",
+      "type": "Ergothérapie",
+      "specialistId": "sp-5",
+      "specialistName": "M. Karim Tazi",
+      "startDate": "2026-07-01",
+      "endDate": "2026-08-31",
+      "morningStart": "09:00",
+      "morningEnd": "12:00",
+      "afternoonStart": "14:00",
+      "afternoonEnd": "17:00",
+      "appointmentDuration": 45,
+      "status": "disponible"
+    },
+    {
+      "id": "r-6",
+      "name": "Salle E06",
+      "type": "Orthoptie",
+      "specialistId": "sp-6",
+      "specialistName": "Mme Fatima-Zahra Alaoui",
+      "startDate": "2026-07-01",
+      "endDate": "2026-08-31",
+      "morningStart": "09:00",
+      "morningEnd": "12:00",
+      "afternoonStart": "14:00",
+      "afternoonEnd": "17:00",
+      "appointmentDuration": 45,
+      "status": "disponible"
+    }
+  ],
+  "parents": [
+    {
+      "id": "p-samir",
+      "userId": "u-parent-samir",
+      "name": "Samir Bennani",
+      "email": "samir.bennani@gmail.com",
+      "phone": "+212 668-990011",
+      "address": "Angle Boulevard Anfa et Zerktouni, Résidence El Bahja, Casablanca",
+      "relation": "Père",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    }
+  ],
+  "children": [
+    {
+      "id": "ch-yassine",
+      "parentId": "p-samir",
+      "name": "Yassine Bennani",
+      "birthdate": "2016-10-12",
+      "gender": "Garçon",
+      "schoolGrade": "CE2 (Primaire)",
+      "diagnostics": [
+        "Dyslexie",
+        "Dysorthographie"
+      ],
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "apt-1",
+      "childId": "ch-yassine",
+      "specialistId": "sp-1",
+      "guichetId": "1",
+      "date": "2026-07-15",
+      "slot": "10:30 - 11:15",
+      "mode": "CENTRE",
+      "status": "CONFIRME",
+      "notes": "Bilan initial d'orthophonie suite aux difficultés de lecture signalées par l'enseignant.",
+      "isOtpVerified": true,
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    },
+    {
+      "id": "apt-2",
+      "childId": "ch-yassine",
+      "specialistId": "sp-1",
+      "guichetId": "1",
+      "date": "2026-07-22",
+      "slot": "09:45 - 10:30",
+      "mode": "CENTRE",
+      "status": "CONFIRME",
+      "notes": "Deuxième séance de rééducation de la lecture syllabique.",
+      "isOtpVerified": true,
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    }
+  ],
+  "consultations": [
+    {
+      "id": "con-1",
+      "appointmentId": "apt-1",
+      "childId": "ch-yassine",
+      "specialistId": "sp-1",
+      "date": "2026-07-15",
+      "motif": "Difficultés majeures dans la vitesse de lecture et omissions de phonèmes complexes.",
+      "diagnostic": "Dyslexie phonologique modérée, dysorthographie d'usage.",
+      "observations": "L'enfant est motivé mais se fatigue vite après 20 minutes d'efforts continus. Confusions récurrentes entre [b] et [d], [p] et [q].",
+      "objectifs": "1. Renforcer la conscience phonologique.\n2. Automatiser la correspondance graphème-phonème.\n3. Améliorer l'empan visuel de lecture.",
+      "recommandations": "Lecture partagée de 10 min par jour à la maison. Utiliser des textes avec police adaptée (DYS font) et espacement double. Privilégier les supports visuels.",
+      "planSuivi": "Rééducation hebdomadaire pendant 6 mois, renouvelable après un bilan intermédiaire.",
+      "signedBySpecialist": true,
+      "signatureData": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50'><path d='M10,30 Q30,5 50,30 T90,30' stroke='blue' fill='none'/></svg>",
+      "nextAppointmentDate": "2026-07-22",
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    }
+  ],
+  "bilans": [
+    {
+      "id": "bil-1",
+      "childId": "ch-yassine",
+      "specialistId": "sp-1",
+      "title": "Bilan Orthophonique Complet de Lecture",
+      "score": "Standardisé (L'Alouette: -2.4 DS)",
+      "date": "2026-07-15",
+      "summary": "Score de vitesse de lecture en deçà des normes du niveau scolaire de l'enfant. Analyse qualitative indiquant un déficit de la voie d'assemblage.",
+      "recommendation": "Mise en place d'un aménagement de tiers-temps aux évaluations de l'école et soutien orthophonique à raison de 2 séances par semaine."
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-1",
+      "title": "Bilan Initial Orthophonie Yassine.pdf",
+      "fileType": "Bilan",
+      "fileUrl": "data:application/pdf;base64,JVBERi0xLjQKJc...",
+      "ownerId": "u-ben",
+      "sharedWithIds": [
+        "u-parent-samir",
+        "u-admin"
+      ],
+      "uploadedAt": "2026-07-15T12:00:00Z"
+    }
+  ],
+  "internalMessages": [
+    {
+      "id": "msg-1",
+      "senderId": "u-ben",
+      "receiverId": "u-admin",
+      "content": "Bonjour l'administration, j'ai complété le dossier du petit Yassine Bennani. J'aurai besoin d'une validation de salle pour sa prochaine séance de groupe de mercredi prochain.",
+      "isRead": false,
+      "createdAt": "2026-07-21T01:28:52.487Z"
+    },
+    {
+      "id": "msg-2",
+      "senderId": "u-admin",
+      "receiverId": "u-ben",
+      "content": "Parfait Amina. Nous avons alloué la Salle A01 de 09:45 à 10:30 pour le dossier Yassine. Le parent est notifié.",
+      "isRead": true,
+      "createdAt": "2026-07-21T00:28:52.487Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "not-1",
+      "type": "SMS",
+      "recipient": "+212 668-990011",
+      "content": "Bonjour Samir Bennani, le rendez-vous de Yassine Bennani avec Dr. Amina Bennani est confirmé pour le 2026-07-22 à 09:45 - 10:30. AMTDA Maroc.",
+      "status": "ENVOYE",
+      "templateName": "confirmation",
+      "sentAt": "2026-07-21T01:28:52.487Z"
+    }
+  ],
+  "parametres": {
+    "siteName": "AMTDA Maroc",
+    "logoSvg": "<svg viewBox=\"0 0 500 180\" xmlns=\"http://www.w3.org/2000/svg\" class=\"h-16 w-auto\">\n  <!-- Styled radiating human figure -->\n  <g transform=\"translate(10, 10)\">\n    <!-- Sun/Knowledge rays -->\n    <line x1=\"80\" y1=\"55\" x2=\"80\" y2=\"15\" stroke=\"#a3e635\" stroke-width=\"8\" stroke-linecap=\"round\" />\n    <line x1=\"80\" y1=\"55\" x2=\"115\" y2=\"25\" stroke=\"#a3e635\" stroke-width=\"8\" stroke-linecap=\"round\" />\n    <line x1=\"80\" y1=\"55\" x2=\"135\" y2=\"55\" stroke=\"#a3e635\" stroke-width=\"8\" stroke-linecap=\"round\" />\n    <line x1=\"80\" y1=\"55\" x2=\"45\" y2=\"25\" stroke=\"#a3e635\" stroke-width=\"8\" stroke-linecap=\"round\" />\n    <line x1=\"80\" y1=\"55\" x2=\"25\" y2=\"55\" stroke=\"#a3e635\" stroke-width=\"8\" stroke-linecap=\"round\" />\n    \n    <!-- Head -->\n    <circle cx=\"80\" cy=\"55\" r=\"16\" fill=\"#15803d\" />\n    \n    <!-- Body & Arms (green/orange-themed stick figure) -->\n    <path d=\"M 80,71 C 70,82 45,84 45,91 C 45,98 65,95 73,88 L 73,120 C 65,135 55,150 55,155 C 55,160 62,158 70,148 L 80,128 L 90,148 C 98,158 105,160 105,155 C 105,150 95,135 87,120 L 87,88 C 95,95 115,98 115,91 C 115,84 90,82 80,71 Z\" fill=\"#84cc16\" />\n  </g>\n  \n  <!-- Text Section -->\n  <g transform=\"translate(160, 20)\">\n    <!-- AMTDA Text -->\n    <text x=\"0\" y=\"70\" font-family=\"'Inter', sans-serif\" font-weight=\"900\" font-size=\"76\" fill=\"#ea580c\" letter-spacing=\"-1\">AMTDA</text>\n    \n    <!-- Subtitle border line -->\n    <line x1=\"0\" y1=\"85\" x2=\"310\" y2=\"85\" stroke=\"#15803d\" stroke-width=\"8\" stroke-linecap=\"round\" />\n    \n    <!-- Subtitle lines -->\n    <text x=\"0\" y=\"112\" font-family=\"'Inter', sans-serif\" font-weight=\"700\" font-size=\"16\" fill=\"#1e3a8a\">Association Marocaine</text>\n    <text x=\"0\" y=\"132\" font-family=\"'Inter', sans-serif\" font-weight=\"500\" font-size=\"14\" fill=\"#475569\">des Troubles et Difficultés d'Apprentissage</text>\n  </g>\n</svg>",
+    "primaryColor": "#15803d",
+    "secondaryColor": "#ea580c",
+    "whatsappContact": "+212 661-089336",
+    "emailContact": "association.amtda@gmail.com",
+    "phoneContact": "+212 522-013444",
+    "appointmentDuration": 45,
+    "alertMessage": "Dépistage gratuit des troubles d'apprentissage pour les écoles primaires de Casablanca en cours.",
+    "notificationTemplates": {
+      "confirmation": "Bonjour {parentName}, le rendez-vous de votre enfant {childName} avec {specialistName} est confirmé pour le {date} à {slot} ({mode}). AMTDA Maroc.",
+      "rappel": "Rappel : Bonjour {parentName}, votre enfant {childName} a rendez-vous demain à {slot} avec {specialistName} chez AMTDA Maroc. Veuillez vous présenter 10 min en avance.",
+      "annulation": "Bonjour {parentName}, nous vous informons que le rendez-vous de votre enfant {childName} du {date} a été annulé ou déplacé. Contactez-nous au {phone}."
+    }
+  },
+  "auditLogs": [
+    {
+      "id": "aud-1",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "INITIALISATION",
+      "details": "Création et configuration initiale de la plateforme de base de données AMTDA Maroc.",
+      "timestamp": "2026-07-21T01:28:52.487Z"
+    }
+  ],
+  "seriousGameResults": [
+    {
+      "id": "res-seed-1",
+      "childId": "ch-yassine",
+      "childName": "Yassine Bennani",
+      "gameName": "Atlas Syllable Adventure",
+      "score": 8,
+      "maxScore": 10,
+      "durationSeconds": 120,
+      "status": "reussite",
+      "whatsappNumber": "+212 668-990011",
+      "notes": "Excellente association de phonèmes arabes, légères hésitations sur le son 'Bab'.",
+      "createdAt": "2026-07-20T01:28:52.487Z"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Plateforme AMTDA Maroc",
+  "description": "Plateforme digitale Premium de prise de rendez-vous, suivi thérapeutique et gestion clinique pour l'Association Marocaine des Troubles et Difficultés d'Apprentissage (AMTDA).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
