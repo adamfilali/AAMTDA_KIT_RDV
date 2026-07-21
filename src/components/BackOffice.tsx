@@ -33,7 +33,7 @@ interface BackOfficeProps {
 }
 
 export default function BackOffice({ disableAnimations }: BackOfficeProps) {
-  const [adminLoggedIn, setAdminLoggedIn] = useState(false);
+  const [adminLoggedIn, setAdminLoggedIn] = useState(true);
   const [password, setPassword] = useState("admin123");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -510,7 +510,7 @@ export default function BackOffice({ disableAnimations }: BackOfficeProps) {
               <label className="block text-xs font-bold text-slate-500 uppercase">Mot de passe d'administration *</label>
               <input
                 id="inp-admin-password"
-                type="password"
+                type="txt"
                 placeholder="Entrez admin123"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
