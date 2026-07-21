@@ -45,7 +45,7 @@ export default function App() {
   });
 
   // Current active view
-  const [currentView, setCurrentView] = useState<PortalView>("landing");
+  const [currentView, setCurrentView] = useState<PortalView>("admin");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [alertBanner, setAlertBanner] = useState<string | null>(null);
 
