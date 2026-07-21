@@ -489,6 +489,182 @@
   },
   "auditLogs": [
     {
+      "id": "aud-7giw93hn8",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:59.322Z"
+    },
+    {
+      "id": "aud-53v0vdkcx",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:58.562Z"
+    },
+    {
+      "id": "aud-niwwtesuf",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:57.665Z"
+    },
+    {
+      "id": "aud-2dqgjpvv2",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:56.580Z"
+    },
+    {
+      "id": "aud-zmyhtg8kp",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:56.189Z"
+    },
+    {
+      "id": "aud-sqs7zhf85",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:55.482Z"
+    },
+    {
+      "id": "aud-cldb0xviq",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:54.785Z"
+    },
+    {
+      "id": "aud-itbtrousb",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:54.434Z"
+    },
+    {
+      "id": "aud-95a5f66nj",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:53.898Z"
+    },
+    {
+      "id": "aud-q6yq52z94",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:53.546Z"
+    },
+    {
+      "id": "aud-hdr5z3cfj",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:53.010Z"
+    },
+    {
+      "id": "aud-64jdhag0t",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:52.497Z"
+    },
+    {
+      "id": "aud-588dfg0y7",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:51.986Z"
+    },
+    {
+      "id": "aud-mg6ogrknt",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:51.283Z"
+    },
+    {
+      "id": "aud-tetvof8oz",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:50.533Z"
+    },
+    {
+      "id": "aud-ug0o21zga",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:49.235Z"
+    },
+    {
+      "id": "aud-r67ylx70f",
+      "userId": "u-parent-samir",
+      "username": "samir",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que PARENT.",
+      "timestamp": "2026-07-21T03:35:30.116Z"
+    },
+    {
+      "id": "aud-z3axb7fbs",
+      "userId": "u-parent-samir",
+      "username": "samir",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que PARENT.",
+      "timestamp": "2026-07-21T03:35:27.691Z"
+    },
+    {
+      "id": "aud-o2j8wzqfe",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:22.419Z"
+    },
+    {
+      "id": "aud-twlii5k6j",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:21.019Z"
+    },
+    {
+      "id": "aud-3vba5t7eg",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:18.964Z"
+    },
+    {
+      "id": "aud-r693ukafq",
+      "userId": "u-admin",
+      "username": "admin",
+      "action": "CONNEXION",
+      "details": "Connexion réussie en tant que ADMIN.",
+      "timestamp": "2026-07-21T03:35:17.545Z"
+    },
+    {
       "id": "aud-1",
       "userId": "u-admin",
       "username": "admin",
