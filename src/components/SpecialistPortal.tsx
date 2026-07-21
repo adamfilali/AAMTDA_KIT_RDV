@@ -113,118 +113,65 @@ const [sessionSpec, setSessionSpec] = useState<any>({ id: "spec-1", name: "Amina
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
 
-  // Authenticate Specialist
+  // Authenticate Specialist (VERSION DÉMO VERCEL)
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(false);
     setError(null);
-    setLoading(true);
-
-    fetch("/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password })
-    })
-      .then(async (res) => {
-        setLoading(false);
-        const data = await res.json();
-        if (!res.ok) {
-          setError(data.message || "Identifiants invalides.");
-        } else {
-          setSessionUser(data.user);
-          setSessionSpec(data.profile);
-          setSpecLoggedIn(true);
-          loadSpecialistData(data.profile.id);
-          loadMessages(data.user.id);
-        }
-      })
-      .catch((err) => {
-        setLoading(false);
-        setError("Erreur de connexion.");
-      });
+    
+    // Initialisation des profils de test
+    setSessionUser({ id: "user-1", name: "Dr. Amina Bennani" });
+    setSessionSpec({ id: "spec-1", name: "Dr. Amina Bennani", profession: "Orthophonie" });
+    setSpecLoggedIn(true);
+    
+    // Chargement des fausses données cliniques pour la présentation
+    loadSpecialistData("spec-1");
+    loadMessages("user-1");
   };
 
   const loadSpecialistData = (specId: string) => {
-    // Load appointments linked to this specialist
-    fetch("/api/appointments")
-      .then((res) => res.json())
-      .then((data) => {
-        const filtered = data.filter((a: any) => a.specialistId === specId);
-        setAppointments(filtered);
-      })
-      .catch((err) => console.error(err));
+    // Liste fictive des rendez-vous
+    setAppointments([
+      { id: "apt-1", childId: "child-1", childName: "Yassine Bennani", date: "Aujourd'hui - 14:30", type: "Téléconsultation Initial", status: AppointmentStatus.CONFIRME, mode: ConsultationMode.VIDEO },
+      { id: "apt-2", childId: "child-2", childName: "Sara Tazi", date: "Demain - 10:00", type: "Suivi Rééducation", status: AppointmentStatus.CONFIRME, mode: ConsultationMode.PRESENTIEL }
+    ]);
 
-    // Load full patient database
-    fetch("/api/children")
-      .then((res) => res.json())
-      .then((data) => setChildrenList(data))
-      .catch((err) => console.error(err));
+    // Base de données des patients enfants
+    setChildrenList([
+      { id: "child-1", name: "Yassine Bennani", age: 8, diagnostic: "Dyslexie", parentName: "Bennani Mohamed", avatar: "👦" },
+      { id: "child-2", name: "Sara Tazi", age: 10, diagnostic: "Dyspraxie", parentName: "Tazi Fatima", avatar: "👧" }
+    ]);
 
-    // Load serious game logs
-    fetch("/api/serious-game-results")
-      .then((res) => res.json())
-      .then((data) => setSeriousGameResults(data))
-      .catch((err) => console.error(err));
+    // Historique des jeux sérieux
+    setSeriousGameResults([
+      { id: "game-1", childName: "Yassine Bennani", game: "Chasse aux Syllabes", score: "85%", date: "Hier", status: "Réussi" },
+      { id: "game-2", childName: "Sara Tazi", game: "Mémoire des Formes", score: "92%", date: "Il y a 2 jours", status: "Excellent" }
+    ]);
 
-    // Load shared documents
-    fetch("/api/documents")
-      .then((res) => res.json())
-      .then((data) => setDocuments(data))
-      .catch((err) => console.error(err));
+    // Documents partagés
+    setDocuments([
+      { id: "doc-1", title: "Bilan_Orthophonique_Youssef.pdf", fileType: "PDF", date: "20/07/2026" },
+      { id: "doc-2", title: "Fiche_Exercices_Syllabes_Dys.pdf", fileType: "PDF", date: "19/07/2026" }
+    ]);
   };
 
   const loadMessages = (userId: string) => {
-    fetch("/api/messages")
-      .then((res) => res.json())
-      .then((data) => {
-        const filtered = data.filter((m: any) => m.senderId === userId || m.receiverId === userId);
-        setMessages(filtered);
-      })
-      .catch((err) => console.error(err));
+    // Fils de discussion factices
+    setMessages([
+      { id: "m-1", senderId: "parent-1", senderName: "Mohamed Bennani", text: "Bonjour Docteur, Yassine a terminé sa session de jeu ce matin. Le score est-il bon ?", date: "09:15" },
+      { id: "m-2", senderId: "user-1", senderName: "Dr. Amina Bennani", text: "Bonjour, oui tout à fait ! Ses résultats sur les syllabes sont en nette progression.", date: "10:30" }
+    ]);
   };
 
   const handleFileUpload = (file: File) => {
-    if (!sessionSpec) return;
-    const reader = new FileReader();
-    reader.onload = async (e) => {
-      const fileUrl = e.target?.result as string;
-      const fileType = file.name.split('.').pop()?.toUpperCase() || "PDF";
-      const payload = {
-        title: file.name,
-        fileType,
-        fileUrl,
-        ownerId: sessionSpec.id,
-        sharedWithIds: ["admin"]
-      };
-      
-      try {
-        const res = await fetch("/api/documents", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-        if (res.ok) {
-          loadSpecialistData(sessionSpec.id);
-        }
-      } catch (err) {
-        console.error("Error sharing file", err);
-      }
-    };
-    reader.readAsDataURL(file);
+    const newDoc = { id: Date.now().toString(), title: file.name, fileType: file.name.split('.').pop()?.toUpperCase() || "PDF", date: "Aujourd'hui" };
+    setDocuments([newDoc, ...documents]);
   };
 
   const handleDeleteDocument = async (id: string) => {
-    if (!sessionSpec) return;
-    try {
-      const res = await fetch(`/api/documents/${id}`, {
-        method: "DELETE"
-      });
-      if (res.ok) {
-        loadSpecialistData(sessionSpec.id);
-      }
-    } catch (err) {
-      console.error("Error deleting document", err);
-    }
+    setDocuments(documents.filter(d => d.id !== id));
   };
+
 
   // Canvas Drawing Actions for Signature Pad
   const startDrawing = (e: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
