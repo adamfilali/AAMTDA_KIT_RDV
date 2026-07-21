@@ -34,7 +34,7 @@ interface SpecialistPortalProps {
 }
 
 export default function SpecialistPortal({ disableAnimations }: SpecialistPortalProps) {
-  const [specLoggedIn, setSpecLoggedIn] = useState(false);
+  const [specLoggedIn, setSpecLoggedIn] = useState(true);
   const [username, setUsername] = useState("amina"); // Test specialist login
   const [password, setPassword] = useState("therapist123");
   const [error, setError] = useState<string | null>(null);
