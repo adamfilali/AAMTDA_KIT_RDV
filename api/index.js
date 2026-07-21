@@ -15,11 +15,11 @@ export default async function handler(req, res) {
     return res.status(200).end();
   }
 
-  // Nettoyage de l'URL pour identifier la route
-  const urlClean = req.url.split('?')[0];
+  // Détection ultra-robuste de la route basée directement sur l'URL d'appel
+  const urlLower = (req.url || '').toLowerCase();
   
   // CAS SPÉCIAL : Interception de la route de l'analyse clinique IA
-  if (urlClean.includes('/api/ai/analyze-situation') && req.method === 'POST') {
+  if (urlLower.includes('analyze-situation') && req.method === 'POST') {
     try {
       const { childId, lastGameName, lastGameScore } = req.body;
 
@@ -36,7 +36,6 @@ Recommandations AMTDA :
 - Poursuivre l'entraînement via des sessions courtes de 10 minutes par jour.
 - Consolider l'axe de renforcement phonologique avant de passer au palier supérieur de lecture fluide.`;
 
-      // On renvoie précisément l'objet structuré attendu par votre useEffect front-end
       return res.status(200).json({
         analysis: mockAnalysis,
         isRealAI: true
@@ -46,14 +45,15 @@ Recommandations AMTDA :
     }
   }
 
-  // ROUTAGE GÉNÉRIQUE SUPABASE (Détection explicite et robuste de la clé pour Vercel)
+  // ROUTAGE GÉNÉRIQUE SUPABASE (Recherche par mot-clé dans l'URL pour Vercel)
   let path = 'users';
-  if (urlClean.includes('specialists')) path = 'specialists';
-  else if (urlClean.includes('rooms')) path = 'rooms';
-  else if (urlClean.includes('appointments')) path = 'appointments';
-  else if (urlClean.includes('serious-game-results')) path = 'serious-game-results';
-  else if (urlClean.includes('admin-stats')) path = 'admin-stats';
-  else if (urlClean.includes('ai-reports')) path = 'ai-reports';
+  if (urlLower.includes('specialist')) path = 'specialists';
+  else if (urlLower.includes('room')) path = 'rooms';
+  else if (urlLower.includes('appointment')) path = 'appointments';
+  else if (urlLower.includes('game') || urlLower.includes('result')) path = 'serious-game-results';
+  else if (urlLower.includes('stat') || urlLower.includes('admin')) path = 'admin-stats';
+  else if (urlLower.includes('report')) path = 'ai-reports';
+  else if (urlLower.includes('guichet')) path = 'guichets';
 
   try {
     if (req.method === 'GET') {
