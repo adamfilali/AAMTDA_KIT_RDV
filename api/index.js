@@ -46,10 +46,14 @@ Recommandations AMTDA :
     }
   }
 
-  // ROUTAGE GÉNÉRIQUE SUPABASE (Pour le reste de l'application : sérieux games, etc.)
-  const segments = urlClean.split('/').filter(Boolean);
-  let path = segments[segments.length - 1] || 'users';
-  if (path === 'api') path = 'users';
+  // ROUTAGE GÉNÉRIQUE SUPABASE (Détection explicite et robuste de la clé pour Vercel)
+  let path = 'users';
+  if (urlClean.includes('specialists')) path = 'specialists';
+  else if (urlClean.includes('rooms')) path = 'rooms';
+  else if (urlClean.includes('appointments')) path = 'appointments';
+  else if (urlClean.includes('serious-game-results')) path = 'serious-game-results';
+  else if (urlClean.includes('admin-stats')) path = 'admin-stats';
+  else if (urlClean.includes('ai-reports')) path = 'ai-reports';
 
   try {
     if (req.method === 'GET') {
