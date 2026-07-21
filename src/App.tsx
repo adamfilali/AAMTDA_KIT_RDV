@@ -165,19 +165,31 @@ export default function App() {
 
             >
               <Calendar className="h-3.5 w-3.5 text-emerald-600 shrink-0" /> Prendre Rendez-vous
-            </button>
+</button>
 
-            <button
-              id="nav-btn-parent"
-              onClick={() => navigateTo("parent")}
-              className={`px-4.5 py-2.5 rounded-xl text-xs font-extrabold transition-all duration-150 flex items-center gap-1.5 ${
-                currentView === "parent" 
-                  ? "bg-white text-emerald-800 dark:bg-slate-800 dark:text-emerald-400 shadow-sm" 
-                  : "text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
-              }`}
-            >
-              <User className="h-3.5 w-3.5 text-emerald-600 shrink-0" /> Espace Parent
-            </button>
+<button
+  id="nav-btn-landing"
+  onClick={() => navigateTo("landing")}
+  className={`px-4.5 py-2.5 rounded-xl text-xs font-extrabold transition-all duration-150 ${
+    currentView === "landing"
+      ? "bg-white text-emerald-800 dark:bg-slate-800 dark:text-emerald-400 shadow-sm"
+      : "text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
+  }`}
+>
+  <Calendar className="h-3.5 w-3.5 text-emerald-600 shrink-0" /> Prendre Rendez-vous
+</button>
+
+<button
+  id="nav-btn-parent"
+  onClick={() => navigateTo("parent")}
+  className={`px-4.5 py-2.5 rounded-xl text-xs font-extrabold transition-all duration-150 flex items-center gap-1.5 ${
+    currentView === "parent"
+      ? "bg-white text-emerald-800 dark:bg-slate-800 dark:text-emerald-400 shadow-sm"
+      : "text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
+  }`}
+>
+  <User className="h-3.5 w-3.5 text-emerald-600 shrink-0" /> Espace Parent
+</button>
 
             <button
               id="nav-btn-specialist"
